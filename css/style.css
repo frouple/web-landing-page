@@ -1,0 +1,261 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container-index{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#026786, #156865);
+}
+
+.container-inner-index{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.logo-image{
+    width: 60px
+}
+.logo{
+    width: 60%;
+}
+
+.headline-index{
+    font-size: 72px;
+    font-weight: bolder;
+    max-width: 400px; 
+    color: #fff;
+    align-self: flex-start;
+}
+
+.subheadline-index{
+    font-size: 34px;
+    font-weight: lighter;
+    max-width: 350px;
+    margin-top: 20px;
+    color: #fff;  
+    align-self: flex-start;
+}
+
+.bold-subheadline-index {
+    font-weight: 400
+}
+
+
+.icons {
+    margin-top: 50px;
+}
+
+.apple{
+    width: 40%;
+    transition: top ease .4s; /* Animation */
+    position: relative;
+}
+
+.google{
+    width: 40%;
+    opacity: 0.9;
+    transition: top ease .4s; /* Animation */
+    position: relative;
+}
+
+.apple:hover{
+    top: -10px
+}
+
+.google:hover{
+    top: -10px
+}
+
+
+.next-index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+    cursor: pointer;
+}
+
+.next-icon-index{
+    width: 144px;
+    transition: top ease .4s;
+    position: relative;
+    transition: top ease .4s; /* Animation */
+}
+
+.next-icon-index:hover{
+    top: -10px
+}
+
+.right-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+@keyframes animation-subheadline-index {
+    0% {
+        opacity: 0;
+        transform: translateY(40%);
+    }
+    20% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+
+    .container-index{
+        height: auto;
+    }
+    .container-inner-index{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .left-index{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headline-index{
+        align-self: center;
+
+    }
+
+    .subheadline-index{
+        align-self: center;
+        max-width: 350px;
+    }
+
+    .right-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .apple, .google{
+        width: 60%;
+    }
+
+    .google{
+        margin-top: 30px;
+    }
+
+    .next-index{
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+
+    .next-icon-index{
+        width: 100px;
+    } 
+
+    .right-index{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}  
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 769px) {
+    .container-inner-index{
+        padding: 20px;
+    }
+
+    .left-index{
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+    .headline-index{
+        font-size: 70px;
+    }
+    
+    .subheadline-index{
+        font-size: 32px;
+    }
+
+    .next-index{
+        margin-top: 60px;
+    }
+
+    .next-icon-index{
+        width: 100px;
+    }  
+
+    .right-index{
+        margin-right: 30px;
+        margin-top: 0px;
+        justify-content: flex-start;
+    }
+} 
+
+@media only screen and (min-width: 830px) {
+    .next-index{
+        margin-top: 100px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 870px) {
+
+    .headline-index{
+        font-size: 72px;
+    }
+    
+    .subheadline-index{
+        font-size: 34px;
+    }
+    .next-index {
+        margin-top: 110px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 900px) {
+    .next-icon-index{
+        width: 144px;
+    }
+}

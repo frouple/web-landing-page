@@ -1,0 +1,357 @@
+.container-home, .container-feed, .container-interest, .container-message, .container-match, .container-chat, .container-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #146866;
+}
+
+.container-inner-screen{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.headline-screen{
+    font-size: 72px;
+    font-weight: bolder;
+    max-width: 400px; 
+    color: #fff;
+    align-self: flex-start;
+}
+
+.subheadline-screen{
+    font-size: 34px;
+    font-weight: lighter;
+    max-width: 350px;
+    margin-top: 20px;
+    color: #fff;  
+    align-self: flex-start;
+}
+
+.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    cursor: pointer;
+}
+
+.next-icon{
+    width: 144px;
+    transition: top ease .4s;
+    position: relative;
+    transition: top ease .4s; /* Animation */
+}
+
+.next-icon:hover{
+    top: -10px
+}
+
+.right-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.screen-img{
+    width: 70%;
+    opacity: 1;
+    cursor: pointer;
+    transition: transform .2s; /* Animation */
+}
+
+.screen-img:hover{
+    transform: scale(1.1);
+}
+
+/* contact
+.form-div{
+    width: 50%; 
+    border: 2px solid #E9F3FB; 
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: lighter;
+    padding-bottom: 50px;
+}
+*/
+
+.form-div{
+    border: 2px solid #E9F3FB;
+    border-radius: 20px;
+    margin-left: 60px;
+    width: 65%;
+    font-weight: lighter;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+#form-email-label, #form-message-label{
+    color: white;
+    font-size: 28px;
+}
+
+input, textarea {
+    all: unset;
+}
+
+#form-email{
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+#form-message-label{
+    margin-top: 40px;
+}
+
+#form-message{
+    color: white;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    resize: none;
+    border: none;
+    overflow: auto;
+    outline: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+#form-submit{
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-weight: lighter;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-top: 40px;
+    display: none;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+@keyframes animation-headline-screen {
+    0% {
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    20% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes animation-subheadline-screen {
+0% {
+    opacity: 0;
+    transform: translateY(80%);
+}
+20% {
+    opacity: 0.5;
+}
+50% {
+    opacity: 1;
+    transform: translateY(0%);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0%);
+}
+}
+
+@keyframes animation-phone-screen {
+    0% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    20% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes animation-next-screen {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .container-home, .container-feed, .container-interest, .container-message, .container-match, .container-chat, .container-contact{
+        height: auto;
+    }
+
+    .container-inner-screen{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .left-screen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .headline-screen{
+        align-self: center;
+
+    }
+
+    .subheadline-screen{
+        align-self: center;
+        max-width: 350px;
+    }
+
+    .next{
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+
+    .next-icon{
+        width: 100px;
+    }  
+
+    .screen-img{
+        width: 80%;
+    }
+
+    .right-screen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-div{
+        margin-left: 0px;
+        width: 80%;
+        text-align: left;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 769px) {
+    .container-inner-screen{
+        padding: 20px;
+    }
+
+    .left-screen{
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+
+    .next{
+        margin-top: 100px;
+    }
+
+    .next-icon{
+        width: 100px;
+    }  
+
+    .right-screen{
+        margin-right: 30px;
+        margin-top: 0px;
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: 830px) {
+    .next{
+        margin-top: 120px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 870px) {
+    .next {
+        margin-top: 140px;
+    }
+
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 900px) {
+    .next-icon{
+        width: 144px;
+    }
+}
