@@ -1,271 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Frouple - meet couples with similar interests.</title>
-    <link rel="stylesheet" href="css/screen.style.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  </head>
-  <body onload="animateIndex('index')">
-    <!--<div class="container">
-        <div class="container-inner">
-            <div class="left-side">
-                <div class="logo-image-div">
-                    <img src="img/logo_img.png" alt="Frouple logo image" class="logo-image" />
-                </div>
-                <div class="headline">
-                    frouple.
-                </div>
-                <div class="subheadline">
-                    The App to form <span class="bold_subheadline">Friendships between Couples</span> with similar interests. 
-                </div>
-                <div class="icons">
-                    <a href="https://www.apple.com">
-                       <img src="img/apple.png" alt="IOS App store image" class="apple" />
-                    </a> 
-                    <a href="https://www.google.com">
-                        <img src="img/google.png" alt="Google play store image" class="google" />
-                    </a>
-                </div>
-            </div>
-            <div class="right-side">
-                <img src="img/slides/feed.png" alt="Phone image" class="phone" />
-            </div>
-        </div>
-    </div> -->
-    <div class="container-index" id="#index">
-      <div class="container-inner-index">
-        <div class="left-index">
-          <div class="headline-index index">frouple.</div>
-          <div class="subheadline-index index">
-            The App to form
-            <span class="bold-subheadline-index"
-              >Friendships between Couples</span
-            >
-            with similar interests.
-            <div class="icons">
-              <a
-                href="https://apps.apple.com/app/frouple/id1617327336"
-                target="_blank"
-              >
-                <img
-                  src="img/apple.png"
-                  alt="IOS App store image"
-                  class="apple"
-                />
-              </a>
 
-              <a
-                href="https://play.google.com/store/apps/details?id=com.frouple.web"
-                target="_blank"
-              >
-                <img
-                  src="img/google.png"
-                  alt="Google play store image"
-                  class="google"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="next-index" onclick="nextScreen('home')">
-            <img src="img/next.png" alt="" class="next-icon-index index" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Frouple - meet couples with similar interests.</title>
+  <link rel="stylesheet" href="css/screen.style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>
+
+<body onload="animateIndex('index')">
+  <div class="container-index" id="#index">
+    <div class="container-inner-index">
+      <div class="left-index">
+        <div class="headline-index index">frouple.</div>
+        <div class="subheadline-index index">
+          The App to form
+          <span class="bold-subheadline-index">Friendships between Couples</span>
+          with similar interests.
+          <div class="icons">
+            <a href="https://apps.apple.com/app/frouple/id1617327336" target="_blank">
+              <img src="img/apple.png" alt="IOS App store image" class="apple" />
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.frouple.web" target="_blank">
+              <img src="img/google.png" alt="Google play store image" class="google" />
+            </a>
           </div>
         </div>
-        <div class="right-index">
-          <img
-            src="img/slides/feed.png"
-            alt="Home screen"
-            class="screen-img index"
-          />
+        <div class="next-index" onclick="nextScreen('home')">
+          <img src="img/next.png" alt="" class="next-icon-index index" />
         </div>
       </div>
-    </div>
-
-    <div class="container-home" id="#home">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen home">Explore!</div>
-          <div class="subheadline-screen home">
-            Click the arrow to explore the Frouple App.
-          </div>
-          <div class="next" onclick="nextScreen('interest')">
-            <img src="img/next.png" alt="" class="next-icon home" />
-          </div>
-        </div>
-        <div class="right-screen">
-          <img
-            src="img/slides/home.png"
-            alt="Home screen"
-            class="screen-img home"
-          />
-        </div>
+      <div class="right-index">
+        <img src="img/slides/feed.png" alt="Home screen" class="screen-img index" />
       </div>
     </div>
-    <div class="container-interest" id="#interest">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen interest">Interests!</div>
-          <div class="subheadline-screen interest">
-            Choose your interests from a bag of options.
-          </div>
-          <div class="next" onclick="nextScreen('feed')">
-            <img src="img/next.png" alt="" class="next-icon interest" />
-          </div>
+  </div>
+
+  <div class="container-home" id="#home">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen home">Explore!</div>
+        <div class="subheadline-screen home">
+          Click the arrow to explore the Frouple App.
         </div>
-        <div class="right-screen">
-          <img
-            src="img/slides/interest.png"
-            alt="Interests screen"
-            class="screen-img interest"
-          />
+        <div class="next" onclick="nextScreen('interest')">
+          <img src="img/next.png" alt="" class="next-icon home" />
         </div>
       </div>
-    </div>
-
-    <div class="container-feed" id="#feed">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen feed">Feeds</div>
-          <div class="subheadline-screen feed">
-            Find couples that share this interests.
-          </div>
-          <div class="next" onclick="nextScreen('match')">
-            <img src="img/next.png" alt="" class="next-icon feed" />
-          </div>
-        </div>
-        <div class="right-screen">
-          <img
-            src="img/slides/feed.png"
-            alt="Interests screen"
-            class="screen-img feed"
-          />
-        </div>
+      <div class="right-screen">
+        <img src="img/slides/home.png" alt="Home screen" class="screen-img home" />
       </div>
     </div>
-
-    <div class="container-match" id="#match">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen match">Match</div>
-          <div class="subheadline-screen match">
-            When two couples like each other, there's a match.
-          </div>
-          <div class="next" onclick="nextScreen('message')">
-            <img src="img/next.png" alt="" class="next-icon match" />
-          </div>
+  </div>
+  <div class="container-interest" id="#interest">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen interest">Interests!</div>
+        <div class="subheadline-screen interest">
+          Choose your interests from a bag of options.
         </div>
-        <div class="right-screen">
-          <img
-            src="img/slides/match.png"
-            alt="Interests screen"
-            class="screen-img match"
-          />
+        <div class="next" onclick="nextScreen('feed')">
+          <img src="img/next.png" alt="" class="next-icon interest" />
         </div>
       </div>
-    </div>
-
-    <div class="container-message" id="#message">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen message">Messages</div>
-          <div class="subheadline-screen message">
-            Find all your matches and messages here.
-          </div>
-          <div class="next" onclick="nextScreen('chat')">
-            <img src="img/next.png" alt="" class="next-icon message" />
-          </div>
-        </div>
-        <div class="right-screen">
-          <img
-            src="img/slides/message.png"
-            alt="Interests screen"
-            class="screen-img message"
-          />
-        </div>
+      <div class="right-screen">
+        <img src="img/slides/interest.png" alt="Interests screen" class="screen-img interest" />
       </div>
     </div>
+  </div>
 
-    <div class="container-chat" id="#chat">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen chat">Chats</div>
-          <div class="subheadline-screen chat">
-            Chat with your matches and organize a meeting.
-          </div>
-          <div class="next" onclick="nextScreen('gold')">
-            <img src="img/next.png" alt="" class="next-icon chat" />
-          </div>
+  <div class="container-feed" id="#feed">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen feed">Feeds</div>
+        <div class="subheadline-screen feed">
+          Find couples that share this interests.
         </div>
-        <div class="right-screen">
-          <img
-            src="img/slides/chat.png"
-            alt="Chats screen"
-            class="screen-img chat"
-          />
+        <div class="next" onclick="nextScreen('match')">
+          <img src="img/next.png" alt="" class="next-icon feed" />
         </div>
       </div>
-    </div>
-    <div class="container-chat" id="#gold">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen gold">Gold</div>
-          <div class="subheadline-screen gold">
-            Get additional cool features when you upgrade.
-          </div>
-          <div class="next" onclick="nextScreen('contact')">
-            <img src="img/next.png" alt="" class="next-icon gold" />
-          </div>
-        </div>
-        <div class="right-screen">
-          <img
-            src="img/slides/gold.png"
-            alt="Chats screen"
-            class="screen-img gold"
-          />
-        </div>
+      <div class="right-screen">
+        <img src="img/slides/feed.png" alt="Interests screen" class="screen-img feed" />
       </div>
     </div>
+  </div>
 
-    <div class="container-contact" id="#contact">
-      <div class="container-inner-screen">
-        <div class="left-screen">
-          <div class="headline-screen contact">Contact</div>
-          <div class="subheadline-screen contact">
-            We would love to hear from you.
-          </div>
-          <div class="next" onclick="nextScreen('index')">
-            <img src="img/next.png" alt="" class="next-icon contact" />
-          </div>
+  <div class="container-match" id="#match">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen match">Match</div>
+        <div class="subheadline-screen match">
+          When two couples like each other, there's a match.
         </div>
-        <div class="right-screen">
-          <div class="form-div">
-            <div id="form-email-label">Email</div>
-            <input type="text" id="form-email" /><br />
-            <div id="form-message-label">Message</div>
-            <textarea id="form-message" rows="8" cols="50"></textarea>
-            <div id="form-submit" onclick="sendEmail()">Send</div>
+        <div class="next" onclick="nextScreen('message')">
+          <img src="img/next.png" alt="" class="next-icon match" />
+        </div>
+      </div>
+      <div class="right-screen">
+        <img src="img/slides/match.png" alt="Interests screen" class="screen-img match" />
+      </div>
+    </div>
+  </div>
 
-            <div class="alert">
-              <span
-                class="closebtn"
-                onclick="this.parentElement.style.display='none';"
-                >&times;</span
-              >
-              <div class="alert-content">
-                <strong id="alert-strong">Danger!</strong> Indicates a dangerous
-                or potentially negative action.
-              </div>
+  <div class="container-message" id="#message">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen message">Messages</div>
+        <div class="subheadline-screen message">
+          Find all your matches and messages here.
+        </div>
+        <div class="next" onclick="nextScreen('chat')">
+          <img src="img/next.png" alt="" class="next-icon message" />
+        </div>
+      </div>
+      <div class="right-screen">
+        <img src="img/slides/message.png" alt="Interests screen" class="screen-img message" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container-chat" id="#chat">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen chat">Chats</div>
+        <div class="subheadline-screen chat">
+          Chat with your matches and organize a meeting.
+        </div>
+        <div class="next" onclick="nextScreen('gold')">
+          <img src="img/next.png" alt="" class="next-icon chat" />
+        </div>
+      </div>
+      <div class="right-screen">
+        <img src="img/slides/chat.png" alt="Chats screen" class="screen-img chat" />
+      </div>
+    </div>
+  </div>
+  <div class="container-chat" id="#gold">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen gold">Gold</div>
+        <div class="subheadline-screen gold">
+          Get additional cool features when you upgrade.
+        </div>
+        <div class="next" onclick="nextScreen('contact')">
+          <img src="img/next.png" alt="" class="next-icon gold" />
+        </div>
+      </div>
+      <div class="right-screen">
+        <img src="img/slides/gold.png" alt="Chats screen" class="screen-img gold" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container-contact" id="#contact">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen contact">Email</div>
+        <div class="subheadline-screen contact">
+          We would love to hear from you.
+        </div>
+        <div class="next" onclick="nextScreen('address')">
+          <img src="img/next.png" alt="" class="next-icon contact" />
+        </div>
+      </div>
+      <div class="right-screen">
+        <div class="form-div">
+          <div id="form-email-label">Email</div>
+          <input type="text" id="form-email" value="" /><br />
+          <div id="form-message-label">Message</div>
+          <textarea id="form-message" rows="8" cols="50">
+</textarea>
+          <div id="form-submit" onclick="sendEmail()">Send</div>
+
+          <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <div class="alert-content">
+              <strong id="alert-strong">Danger!</strong> Indicates a dangerous
+              or potentially negative action.
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/script.js"></script>
-  </body>
+  </div>
+
+  <div class="container-chat" id="#address">
+    <div class="container-inner-screen">
+      <div class="left-screen">
+        <div class="headline-screen address">Contact</div>
+        <div class="address-address">
+          <div class="address-area">
+            <div class="address-icon">
+              <img src="img/address.png" alt="Location" class="address-icon-img">
+            </div>
+            <div class="address-text">
+              Frouple UG (haftungsbeschränkt) <br />Kaiser-Friedrich-Ring 46 <br />65185 Wiesbaden
+            </div>
+          </div>
+
+          <div class="address-area">
+            <div class="address-icon">
+              <img src="img/mobile.png" alt="Location" class="address-icon-img">
+            </div>
+            <a class="address-text" href="tel:+49 17673218238">+49 17673218238
+            </a>
+          </div>
+
+          <div class="address-area">
+            <div class="address-icon">
+              <img src="img/contact.png" alt="Location" class="address-icon-img">
+            </div>
+
+            <a class="address-text" href="mailto:contact@frouple.com">contact@frouple.com</a>
+
+          </div>
+
+          <div class="frouple-links">
+            <a href="privacy_policy.html" target="_blanck" class="frouple-link-policy">Privacy policy</a>
+            <a href="terms_and_conditions.html" target="_blanck" class="frouple-link-terms">Terms of Use</a>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="right-screen">
+        <div class="address-div">
+          <div class="icons-address">
+            <a href="https://apps.apple.com/app/frouple/id1617327336" target="_blank">
+              <img src="img/apple_big.png" alt="IOS App store image" class="apple" />
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.frouple.web" target="_blank">
+              <img src="img/google_big.png" alt="Google play store image" class="google" />
+            </a>
+
+            <div class="next-address" onclick="nextScreen('index')">
+              <img src="img/next_up.png" alt="" class="next-icon gold" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>

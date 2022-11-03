@@ -14,33 +14,54 @@ function nextScreen(nextpage) {
   //scroll to next page
   document.getElementById("#" + nextpage).scrollIntoView();
 
-  //annimate elements on the page
-  document.getElementsByClassName(nextpage)[0].style.animation =
-    "animation-headline-screen 3s ease-out";
-  document.getElementsByClassName(nextpage)[1].style.animation =
-    "animation-subheadline-screen 3s ease-out";
-  document.getElementsByClassName(nextpage)[2].style.animation =
-    "animation-next-screen 3s ease-out";
+  //address page is handled differently
+  if (nextpage === "address") {
+    document.getElementsByClassName(nextpage)[0].style.animation =
+      "animation-headline-screen 3s ease-out";
+    document.getElementsByClassName("address-address")[0].style.animation =
+      "animation-subheadline-screen 3s ease-out";
+  } else {
+    //annimate elements on the page
+    document.getElementsByClassName(nextpage)[0].style.animation =
+      "animation-headline-screen 3s ease-out";
+    document.getElementsByClassName(nextpage)[1].style.animation =
+      "animation-subheadline-screen 3s ease-out";
+    document.getElementsByClassName(nextpage)[2].style.animation =
+      "animation-next-screen 3s ease-out";
+  }
 
-  if (nextpage !== "contact") {
-    document.getElementsByClassName(nextpage)[3].style.animation =
+  if (nextpage === "contact") {
+    document.getElementsByClassName("form-div")[0].style.animation =
+      "animation-phone-screen 2s ease-out";
+  } else if (nextpage === "address") {
+    document.getElementsByClassName("address-div")[0].style.animation =
       "animation-phone-screen 2s ease-out";
   } else {
-    document.getElementsByClassName("form-div")[0].style.animation =
+    document.getElementsByClassName(nextpage)[3].style.animation =
       "animation-phone-screen 2s ease-out";
   }
 
   //remove annimation style
   setTimeout(() => {
-    document.getElementsByClassName(nextpage)[0].style.animation = null;
-    document.getElementsByClassName(nextpage)[1].style.animation = null;
-    document.getElementsByClassName(nextpage)[2].style.animation = null;
-    if (nextpage !== "contact") {
-      document.getElementsByClassName(nextpage)[3].style.animation = null;
-    } else {
+    if (nextpage === "contact") {
+      document.getElementsByClassName(nextpage)[0].style.animation = null;
+      document.getElementsByClassName(nextpage)[1].style.animation = null;
+      document.getElementsByClassName(nextpage)[2].style.animation = null;
+
       document.getElementsByClassName("form-div")[0].style.animation = null;
+    } else if (nextpage === "address") {
+      document.getElementsByClassName(nextpage)[0].style.animation = null;
+      document.getElementsByClassName("address-div")[0].style.animation = null;
+      document.getElementsByClassName("address-address")[0].style.animation =
+        null;
+    } else {
+      document.getElementsByClassName(nextpage)[0].style.animation = null;
+      document.getElementsByClassName(nextpage)[1].style.animation = null;
+      document.getElementsByClassName(nextpage)[2].style.animation = null;
+
+      document.getElementsByClassName(nextpage)[3].style.animation = null;
     }
-  }, 4000);
+  }, 3000);
 }
 
 function validateEmail(email) {
@@ -82,10 +103,6 @@ function sendEmail() {
       document.getElementsByClassName("alert-content")[0].innerHTML =
         "<strong>Success!</strong> Your message has been sent!";
       document.getElementsByClassName("alert")[0].style.display = "block";
-    
-    document.getElementById("form-email").value = "";
-    document.getElementById("form-message").value = "";
-
     })
     .catch((error) => {
       console.log(error);
