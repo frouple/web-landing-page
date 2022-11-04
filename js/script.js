@@ -1,3 +1,13 @@
+window.onload = function() {
+  if(window.location.href.includes("#address")){
+    nextScreen("address")
+  }
+}
+
+if(document.readyState === "complete"){
+
+}
+
 function animateIndex(page) {
   //console.log(document.getElementsByClassName(page));
   document.getElementsByClassName(page)[0].style.animation =
