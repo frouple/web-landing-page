@@ -1,5 +1,12 @@
+window.onload = function () {
+  if (window.location.href.includes("#address")) {
+    nextScreen("address");
+  }
+};
+
 const the_animation = document.querySelectorAll(".animation");
 
+//for scroll animation
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
