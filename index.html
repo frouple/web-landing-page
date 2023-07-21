@@ -14,12 +14,12 @@
   <link rel="manifest" href="/site.webmanifest" />
 </head>
 
-<body onload="animateIndex('index')">
-  <div class="container-index" id="#index">
+<body>
+  <section class="animation container-index" id="#index">
     <div class="container-inner-index">
       <div class="left-index">
-        <div class="headline-index index">frouple.</div>
-        <div class="subheadline-index index">
+        <div class="headline-screen index">frouple.</div>
+        <div class="subheadline-screen index">
           The App to form
           <span class="bold-subheadline-index">Friendships between Couples</span>
           with similar interests.
@@ -34,16 +34,16 @@
           </div>
         </div>
         <div class="next-index" onclick="nextScreen('home')">
-          <img src="img/next.png" alt="" class="next-icon-index index" />
+          <img src="img/next.png" alt="" class="next-icon index" />
         </div>
       </div>
       <div class="right-index">
         <img src="img/slides/feed.png" alt="Home screen" class="screen-img index" />
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-home" id="#home">
+  <section class="animation container-home" id="#home">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen home">Explore!</div>
@@ -58,8 +58,8 @@
         <img src="img/slides/home.png" alt="Home screen" class="screen-img home" />
       </div>
     </div>
-  </div>
-  <div class="container-interest" id="#interest">
+  </section>
+  <section class="animation container-interest" id="#interest">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen interest">Interests!</div>
@@ -74,9 +74,9 @@
         <img src="img/slides/interest.png" alt="Interests screen" class="screen-img interest" />
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-feed" id="#feed">
+  <section class="animation container-feed" id="#feed">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen feed">Feeds</div>
@@ -91,9 +91,9 @@
         <img src="img/slides/feed.png" alt="Interests screen" class="screen-img feed" />
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-match" id="#match">
+  <section class="animation container-match" id="#match">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen match">Match</div>
@@ -108,9 +108,9 @@
         <img src="img/slides/match.png" alt="Interests screen" class="screen-img match" />
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-message" id="#message">
+  <section class="animation container-message" id="#message">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen message">Messages</div>
@@ -125,9 +125,9 @@
         <img src="img/slides/message.png" alt="Interests screen" class="screen-img message" />
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-chat" id="#chat">
+  <section class="animation container-chat" id="#chat">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen chat">Chats</div>
@@ -142,8 +142,8 @@
         <img src="img/slides/chat.png" alt="Chats screen" class="screen-img chat" />
       </div>
     </div>
-  </div>
-  <div class="container-chat" id="#gold">
+  </section>
+  <section class="animation container-chat" id="#gold">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen gold">Gold</div>
@@ -158,9 +158,9 @@
         <img src="img/slides/gold.png" alt="Chats screen" class="screen-img gold" />
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-contact" id="#contact">
+  <section class="animation container-contact" id="#contact">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen contact">Email</div>
@@ -176,8 +176,7 @@
           <div id="form-email-label">Email</div>
           <input type="text" id="form-email" value="" /><br />
           <div id="form-message-label">Message</div>
-          <textarea id="form-message" rows="8" cols="50">
-</textarea>
+          <textarea id="form-message" rows="8" cols="50"></textarea>
           <div id="form-submit" onclick="sendEmail()">Send</div>
 
           <div class="alert">
@@ -190,9 +189,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-chat" id="#address">
+  <section class="animation container-chat" id="#address">
     <div class="container-inner-screen">
       <div class="left-screen">
         <div class="headline-screen address">Contact</div>
@@ -250,7 +249,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <script src="js/script.js"></script>
 </body>
