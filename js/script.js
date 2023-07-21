@@ -1,77 +1,92 @@
-window.onload = function() {
-  if(window.location.href.includes("#address")){
-    nextScreen("address")
-  }
-}
+const the_animation = document.querySelectorAll(".animation");
 
-if(document.readyState === "complete"){
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const parentId = entry.target.id;
+      const parent = document.getElementById(parentId);
+      const child_headline = parent.querySelector(".headline-screen");
+      const child_subheadline = parent.querySelector(".subheadline-screen");
+      const child_next = parent.querySelector(".next-icon");
+      const child_phone = parent.querySelector(".screen-img");
+      const pages = [
+        "#home",
+        "#index",
+        "#interest",
+        "#feed",
+        "#match",
+        "#message",
+        "#chat",
+        "#gold",
+      ];
 
-}
+      const addressPage = "#address";
+      const contactPage = "#contact";
 
-function animateIndex(page) {
-  //console.log(document.getElementsByClassName(page));
-  document.getElementsByClassName(page)[0].style.animation =
-    "animation-headline-screen 2s ease-out";
-  document.getElementsByClassName(page)[1].style.animation =
-    "animation-subheadline-index 2s ease-out";
-  document.getElementsByClassName(page)[2].style.animation =
-    "animation-next-screen 2s ease-out";
-  document.getElementsByClassName(page)[3].style.animation =
-    "animation-phone-screen 2s ease-out";
+      if (entry.isIntersecting) {
+        // headline and next is same for all page
+        child_headline.classList.add("animation-headline");
+        child_next.classList.add("animation-next");
+
+        // subheadline is common to all except address page
+        if (parentId !== addressPage) {
+          child_subheadline.classList.add("animation-subheadline");
+        }
+
+        if (pages.includes(parentId)) {
+          child_phone.classList.add("animation-phone");
+        }
+        if (parentId === contactPage) {
+          const contactForm = parent.querySelector(".form-div");
+          contactForm.classList.add("animation-phone");
+        }
+
+        if (parentId === addressPage) {
+          const addressDivLeft = parent.querySelector(".address-address");
+          const addressDivRight = parent.querySelector(".address-div");
+          addressDivLeft.classList.add("animation-subheadline");
+          addressDivRight.classList.add("animation-phone");
+        }
+      } else {
+        // common to all
+        child_headline.classList.remove("animation-headline");
+        child_next.classList.remove("animation-next");
+
+        //common to all except address page
+        if (parentId !== addressPage) {
+          child_subheadline.classList.remove("animation-subheadline");
+        }
+
+        if (pages.includes(parentId)) {
+          child_phone.classList.remove("animation-phone");
+        }
+
+        if (parentId === contactPage) {
+          const contactForm = parent.querySelector(".form-div");
+          contactForm.classList.remove("animation-phone");
+        }
+
+        if (parentId === addressPage) {
+          const addressDivLeft = parent.querySelector(".address-address");
+          const addressDivRight = parent.querySelector(".address-div");
+          addressDivRight.classList.remove("animation-phone");
+          addressDivLeft.classList.remove("animation.subheadline");
+        }
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+//
+for (let i = 0; i < the_animation.length; i++) {
+  const elements = the_animation[i];
+
+  observer.observe(elements);
 }
 
 function nextScreen(nextpage) {
   //scroll to next page
   document.getElementById("#" + nextpage).scrollIntoView();
-
-  //address page is handled differently
-  if (nextpage === "address") {
-    document.getElementsByClassName(nextpage)[0].style.animation =
-      "animation-headline-screen 3s ease-out";
-    document.getElementsByClassName("address-address")[0].style.animation =
-      "animation-subheadline-screen 3s ease-out";
-  } else {
-    //annimate elements on the page
-    document.getElementsByClassName(nextpage)[0].style.animation =
-      "animation-headline-screen 3s ease-out";
-    document.getElementsByClassName(nextpage)[1].style.animation =
-      "animation-subheadline-screen 3s ease-out";
-    document.getElementsByClassName(nextpage)[2].style.animation =
-      "animation-next-screen 3s ease-out";
-  }
-
-  if (nextpage === "contact") {
-    document.getElementsByClassName("form-div")[0].style.animation =
-      "animation-phone-screen 2s ease-out";
-  } else if (nextpage === "address") {
-    document.getElementsByClassName("address-div")[0].style.animation =
-      "animation-phone-screen 2s ease-out";
-  } else {
-    document.getElementsByClassName(nextpage)[3].style.animation =
-      "animation-phone-screen 2s ease-out";
-  }
-
-  //remove annimation style
-  setTimeout(() => {
-    if (nextpage === "contact") {
-      document.getElementsByClassName(nextpage)[0].style.animation = null;
-      document.getElementsByClassName(nextpage)[1].style.animation = null;
-      document.getElementsByClassName(nextpage)[2].style.animation = null;
-
-      document.getElementsByClassName("form-div")[0].style.animation = null;
-    } else if (nextpage === "address") {
-      document.getElementsByClassName(nextpage)[0].style.animation = null;
-      document.getElementsByClassName("address-div")[0].style.animation = null;
-      document.getElementsByClassName("address-address")[0].style.animation =
-        null;
-    } else {
-      document.getElementsByClassName(nextpage)[0].style.animation = null;
-      document.getElementsByClassName(nextpage)[1].style.animation = null;
-      document.getElementsByClassName(nextpage)[2].style.animation = null;
-
-      document.getElementsByClassName(nextpage)[3].style.animation = null;
-    }
-  }, 3000);
 }
 
 function validateEmail(email) {
